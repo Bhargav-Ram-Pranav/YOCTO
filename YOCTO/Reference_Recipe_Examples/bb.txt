@@ -1,0 +1,17 @@
+SUMMARY = "A brief description of your recipe"
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=<checksum>"
+
+SRC_URI = "git://github.com/example/myproject.git;protocol=https"
+
+S = "${WORKDIR}/git"
+
+inherit autotools
+
+DEPENDS = "libtool"
+
+# Specify the recipes needed to build this recipe
+RDEPENDS_${PN} = "libxyz libabc"
+
+# Additional configuration, compilation options, etc.
+
